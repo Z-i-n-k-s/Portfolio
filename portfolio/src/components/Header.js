@@ -38,7 +38,7 @@ const Header = () => {
           onMouseLeave={handleMouseLeave}
           onTouchStart={handleTouchStart}
         >
-          <SideLogo className="fixed z-10" />
+        
 
           {(isHovered || isTouched) ? (
             <HoverLogo className="relative z-20 h-[68px]" />
