@@ -7,7 +7,7 @@ const HomePage = () => {
     <div>HomePage
       <div>
       <button className='border-2 border-black rounded-lg p-0'>
-  <Button name="Click Me" width="150px" height="50px" className="p-0 m-0" />
+  <Button name="Click Me" width="150px" height="50px " rounded='lg' className="p-0 m-0" />
 </button>
 
       

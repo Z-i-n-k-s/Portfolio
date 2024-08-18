@@ -1,13 +1,12 @@
 import React, { useState, useRef } from 'react';
-import PropTypes from 'prop-types'; // For type-checking props
+import PropTypes from 'prop-types';
 
-const Button = ({ name, width, height }) => {
+const Button = ({ name, width, height, onClick, rounded = 'lg' }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [position, setPosition] = useState({ top: '50%', left: '50%' });
   const [initialPosition, setInitialPosition] = useState({ top: '50%', left: '50%' });
   const buttonRef = useRef(null);
 
-  // Fixed color for the button
   const btnColorDark = 'hsl(0, 0%, 0%)'; // Adjust as needed
 
   const handleMouseEnter = (e) => {
@@ -41,11 +40,11 @@ const Button = ({ name, width, height }) => {
     overflow: 'hidden',
     position: 'relative',
     cursor: 'pointer',
-    width: width || 'auto', // Use prop for width, default to 'auto'
-    height: height || 'auto', // Use prop for height, default to 'auto'
-    display: 'flex', // Center content
-    alignItems: 'center', // Vertically center
-    justifyContent: 'center', // Horizontally center
+    width: width || 'auto',
+    height: height || 'auto',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   };
 
   const spanStyle = {
@@ -63,12 +62,13 @@ const Button = ({ name, width, height }) => {
   return (
     <a
       ref={buttonRef}
-      className="relative inline-block border border-transparent rounded-lg"
+      className={`relative inline-block border border-transparent rounded-${rounded}`}
       href="#"
       style={buttonStyle}
       onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick} // Make onClick dynamic
     >
       <span
         className="absolute rounded-full"
@@ -85,6 +85,8 @@ Button.propTypes = {
   name: PropTypes.string.isRequired,
   width: PropTypes.string,
   height: PropTypes.string,
+  onClick: PropTypes.func, // Make onClick prop dynamic
+  rounded: PropTypes.string, // Make the rounded part dynamic
 };
 
 export default Button;
