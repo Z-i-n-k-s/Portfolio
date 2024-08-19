@@ -32,10 +32,12 @@ module.exports = {
       'xl': '1280px',
       '2xl': '1536px',
 
-
+      
+      '4xl-mx': { 'max': '2135px' },
+      '3xl-mx': { 'max': '1835px' },
       '2xl-mx': { 'max': '1535px' },
-      'xl-mx': { 'max': '1279px' },
-      'lg-mx': { 'max': '1023px' },
+      'xl-mx': { 'max': '1284px' },
+      'lg-mx': { 'max': '1028px' },
       'bs-mx': { 'max': '899px' },
       'md-mx': { 'max': '767px' },
       'sm-mx': { 'max': '639px' },

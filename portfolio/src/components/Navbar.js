@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Button from './Button';
 import DefaultLogo from './DefaultLogo'; // Ensure DefaultLogo is imported
+import HorizontalIcons from './HorizontalIcons'; // Import the new HorizontalIcons component
 
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -94,7 +95,7 @@ const Navbar = () => {
 
           {/* Drawer Items */}
           <div className="flex flex-col items-center justify-center flex-grow pt-8 pb-10">
-            <ul className="space-y-4 font-medium pb-56">
+            <ul className="space-y-4 font-medium pb-40">
               <li>
                 <Button name="About" width="200px" height="50px" rounded="full" />
               </li>
@@ -108,6 +109,9 @@ const Navbar = () => {
                 <Button name="Contact" width="200px" height="50px" rounded="full" />
               </li>
             </ul>
+
+            {/* Horizontal Icons */}
+            <HorizontalIcons />
           </div>
         </div>
       </motion.div>

@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <Header />
-      <VerticalName/>
-      <VerticalIcons/>
+      <VerticalName />
+      <VerticalIcons />
       
       <main>
         <Outlet />
