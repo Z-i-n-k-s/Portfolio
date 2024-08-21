@@ -16,10 +16,20 @@ module.exports = {
           "background-position-spin 3000ms infinite alternate",
       },
       keyframes: {
-        "background-position-spin": {
-          "0%": { backgroundPosition: "top center" },
-          "100%": { backgroundPosition: "bottom center" },
+        profileAnimate: {
+          '0%': {
+            borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+          },
+          '50%': {
+            borderRadius: '30% 60% 70% 40% / 50% 60% 30% 60%',
+          },
+          '100%': {
+            borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+          },
         },
+      },
+      animation: {
+        profile: 'profileAnimate 8s ease-in-out infinite 1s',
       },
     },
     screens: {

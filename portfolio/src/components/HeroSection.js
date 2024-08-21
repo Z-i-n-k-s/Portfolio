@@ -50,14 +50,19 @@ const HeroSection = () => {
       </div>
 
       <div className="h-fit flex justify-center items-center rounded-full bs:mr-10 w-fit">
-        <div className=" w-[325px] h-[325px] lg-mx:w-64 lg-mx:h-64 xsm-mx:w-56 xsm-mx:h-56 items-center justify-center text-center ">
-          <img
-            className="w-full  h-full rounded-full  "
-            src={image2}
-            alt="profile"
-          />
-        </div>
-      </div>
+  <div className="w-[325px] h-[325px] lg-mx:w-64 lg-mx:h-64 xsm-mx:w-56 xsm-mx:h-56 items-center justify-center text-center">
+    <img
+      className="w-full h-full rounded-full bg-center bg-cover shadow-[inset_0_0_0_9px_rgba(2 ,255, 255 ,0.3)] animate-profile order-1 justify-self-center"
+      src={image2}
+      alt="profile"
+      style={{
+        backgroundRepeat: "no-repeat",
+        boxShadow: "inset 0 0 0 9px rgba(255, 255, 255, 0.3)",
+      }}
+    />
+  </div>
+</div>
+
     </div>
   );
 };
