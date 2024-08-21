@@ -42,7 +42,7 @@ module.exports = {
       'md-mx': { 'max': '767px' },
       'sm-mx': { 'max': '639px' },
       'xs-mx': { 'max': '475px' },
-      'xsm-mx': { 'max': '380px' }
+      'xsm-mx': { 'max': '360px' }
     }
 
   },

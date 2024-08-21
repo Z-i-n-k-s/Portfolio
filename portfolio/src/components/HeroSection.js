@@ -20,7 +20,7 @@ const HeroSection = () => {
           {UserInfo.name}
         </div>
 
-        <div className="text-black text-4xl flex font-semibold lg-mx:text-[27px] sm-mx:text-2xl xs-mx:text-xl xsm-mx:text-lg  ">
+        <div className="text-black text-4xl flex font-semibold lg-mx:text-[27px] sm-mx:text-2xl xs-mx:text-xl xsm-mx:text-base  ">
           I'm a&nbsp;
           <span className="text-black">
             <Typewriter
@@ -33,11 +33,11 @@ const HeroSection = () => {
           </span>
         </div>
         <div className=" flex xs-mx:flex xs-mx:justify-center xs-mx:items-center sm-mx:flex sm-mx:justify-center sm-mx:items-center lg-mx:flex lg-mx:justify-center lg-mx:items-center xl-mx:flex xl-mx:justify-center xl-mx:items-center ">
-          <div className="text-black xsm-mx:text-xs xsm-mx:w-full  sm-mx:flex-row sm-mx:text-sm justify-center items-center  text-xl w-full text-justify my-8 lg-mx:my-0 font-semibold lg-mx:text-base ">
-            <button className="border-2 border-black rounded-lg m-2 ">
+          <div className=" flex flex-wrap gap-4 sm:my-0 lg:text-base text-black xsm-mx:text-xs xsm-mx:w-full sm-mx:flex-row sm-mx:text-sm justify-center items-center  text-xl w-full text-justify my-8 lg-mx:my-0 font-semibold lg-mx:text-base ">
+            <button className="border-2 border-black rounded-lg m-2  ">
               <Button name="Resume" width="140px" height="50px" rounded="lg" />
             </button>
-            <button className="border-2 border-black rounded-lg m-2 ">
+            <button className="border-2 border-black rounded-lg m-2 xsm-mx:!-m-2 ">
               <Button
                 name="Download"
                 width="140px "
