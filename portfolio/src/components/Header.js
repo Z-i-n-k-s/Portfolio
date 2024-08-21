@@ -28,7 +28,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="h-20 shadow-lg pt-2 pb-2 flex items-center">
+    <header className="h-20 shadow-xl pt-2 pb-2 flex items-center px-8  ">
       <div className="h-full container mx-auto flex items-center justify-between">
         {/* Logo Section */}
 
