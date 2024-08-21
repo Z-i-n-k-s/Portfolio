@@ -5,10 +5,12 @@ import VerticalIcons from "../components/VerticalIcons";
 import About from "../components/About";
 import HeroSection from "../components/HeroSection";
 
+
 const HomePage = () => {
   return (
     <div>
       <HeroSection/>
+      
       <div>
         {/* <button className="border-2 border-black rounded-lg p-0">
           <Button
@@ -22,6 +24,7 @@ const HomePage = () => {
 
         {/* <VerticalName/> */}
       </div>
+     <About/>
     </div>
   );
 };
