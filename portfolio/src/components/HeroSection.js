@@ -9,7 +9,7 @@ import { useMatches } from "react-router-dom";
 const HeroSection = () => {
   return (
     <div className=" h-{100vh} mt-24 flex relative overflow-hidden  items-center font-mono px-10 py-10 sm-mx:px-4 xs-mx:px-2 xs-mx:py-4 h-fit lg-mx:justify-between bs-mx:flex-wrap bs-mx:flex-col-reverse bs-mx:!overflow-visible bs-mx:gap-6 md-mx:px-6">
-      <div className="bs:ml-10 bs:w-3/5 flex-col lg-mx:gap-3  bs-mx:items-center flex justify-center items-center  ">
+      <div className="bs:ml-10 bs:w-3/5 flex-col lg-mx:gap-3 mx-4 bs-mx:items-center flex justify-center items-center  ">
         <div className="text-black text-3xl lg-mx:text-2xl xs-mx:text-xl xsm-mx:text-lg">
           Hello,{" "}
           <p className="2xl-mx:pl-28 2xl-mx:!-mt-4 4xl-mx:pl-32 4xl-mx:!-mt-4 4xl-mx:text-3xl sm-mx:pl-20 sm-mx:!-mt-4 sm-mx:text-xl ">
@@ -32,15 +32,15 @@ const HeroSection = () => {
             />{" "}
           </span>
         </div>
-        <div className=" sm-mx:flex sm-mx:justify-center sm-mx:items-center lg-mx:flex lg-mx:justify-center lg-mx:items-center xl-mx:flex xl-mx:justify-center xl-mx:items-center ">
-          <div className="text-black sm-mx:flex-row justify-center items-center  text-xl w-full text-justify my-8 lg-mx:my-0 font-semibold lg-mx:text-base sm-mx:text-sm xs-mx:text-xs">
-            <button className="border-2 border-black rounded-lg m-2">
-              <Button name="Resume" width="150px" height="50px" rounded="lg" />
+        <div className=" flex xs-mx:flex xs-mx:justify-center xs-mx:items-center sm-mx:flex sm-mx:justify-center sm-mx:items-center lg-mx:flex lg-mx:justify-center lg-mx:items-center xl-mx:flex xl-mx:justify-center xl-mx:items-center ">
+          <div className="text-black xsm-mx:text-xs xsm-mx:w-full  sm-mx:flex-row sm-mx:text-sm justify-center items-center  text-xl w-full text-justify my-8 lg-mx:my-0 font-semibold lg-mx:text-base ">
+            <button className="border-2 border-black rounded-lg m-2 ">
+              <Button name="Resume" width="140px" height="50px" rounded="lg" />
             </button>
-            <button className="border-2 border-black rounded-lg m-2">
+            <button className="border-2 border-black rounded-lg m-2 ">
               <Button
                 name="Download"
-                width="150px"
+                width="140px "
                 height="50px"
                 rounded="lg"
               />

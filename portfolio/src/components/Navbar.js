@@ -22,10 +22,10 @@ const Navbar = () => {
     <div className="relative">
       {/* Buttons for larger screens */}
       <div className={`hidden sm:flex gap-4 ${isDrawerOpen ? "pointer-events-none" : ""}`}>
-        <Button name="About" width="100px" height="50px" rounded="full" />
-        <Button name="Projects" width="100px" height="50px" rounded="full" />
-        <Button name="Skills" width="100px" height="50px" rounded="full" />
-        <Button name="Contact" width="100px" height="50px" rounded="full" />
+        <Button name="About" width="100px" height="40px" rounded="full" />
+        <Button name="Projects" width="100px" height="40px" rounded="full" />
+        <Button name="Skills" width="100px" height="40px" rounded="full" />
+        <Button name="Contact" width="100px" height="40px" rounded="full" />
       </div>
 
       {/* Hamburger Icon for smaller screens */}
