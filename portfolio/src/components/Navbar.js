@@ -1,41 +1,48 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import Button from './Button';
-import DefaultLogo from './DefaultLogo'; // Ensure DefaultLogo is imported
-import HorizontalIcons from './HorizontalIcons'; // Import the new HorizontalIcons component
+import HorizontalIcons from './HorizontalIcons';
+import { Navigate } from "react-router-dom";
 
-const Navbar = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const navigate = useNavigate();
+const Navbar = ({ isDrawerOpen, toggleDrawer, closeDrawer }) => {
 
-  const toggleDrawer = () => {
-    setIsDrawerOpen(!isDrawerOpen);
-  };
-
-  const handleLogoClick = () => {
-    toggleDrawer();
-    navigate('/');
+  const handleButtonClick = (href, isExternal) => {
+    closeDrawer();
+    setTimeout(() => {
+      if (isExternal) {
+        window.open(href, '_blank'); // Open external link in a new tab
+      } else if (href.startsWith('/')) {
+        // Navigate to internal route
+        Navigate(href);
+      } else {
+        // Scroll to section on the same page
+        const sectionElement = document.getElementById(href);
+        if (sectionElement) {
+          sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          console.error(`Element with id ${href} not found`);
+        }
+      }
+    }, 300); // 300ms delay to allow drawer closing animation
   };
 
   return (
     <div className="relative">
-      {/* Buttons for larger screens */}
+      {/* Desktop Navbar */}
       <div className={`hidden sm:flex gap-4 ${isDrawerOpen ? "pointer-events-none" : ""}`}>
-        <Button name="About" width="100px" height="40px" rounded="full" />
-        <Button name="Projects" width="100px" height="40px" rounded="full" />
-        <Button name="Skills" width="100px" height="40px" rounded="full" />
-        <Button name="Contact" width="100px" height="40px" rounded="full" />
+        <Button name="About" width="100px" height="40px" rounded="full" href={`#about`} />
+        <Button name="Projects" width="100px" height="40px" rounded="full" href="projects" />
+        <Button name="Skills" width="100px" height="40px" rounded="full" href="skills" />
+        <Button name="Contact" width="100px" height="40px" rounded="full" href="contact" />
       </div>
 
-      {/* Hamburger Icon for smaller screens */}
+      {/* Mobile Navbar Toggle Button */}
       <div className={`flex sm:hidden ${isDrawerOpen ? "pointer-events-none" : ""}`}>
         <button
           className="text-gray-900 bg-transparent hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 rounded-lg p-2.5"
           onClick={toggleDrawer}
           aria-controls="drawer-navigation"
         >
-          {/* Hamburger Icon */}
           <svg
             className="w-6 h-6"
             aria-hidden="true"
@@ -54,10 +61,10 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Drawer */}
+      {/* Drawer Navigation */}
       <motion.div
         id="drawer-navigation"
-        className="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto bg-white w-64"
+        className="fixed top-0 right-0 pt-24 z-30 h-screen p-4 overflow-y-auto bg-white w-64"
         initial={{ x: '100%' }}
         animate={{ x: isDrawerOpen ? '0%' : '100%' }}
         transition={{ type: 'tween', duration: 0.5 }}
@@ -87,42 +94,26 @@ const Navbar = () => {
             </svg>
           </button>
 
-          {/* Centered Logo */}
-          <DefaultLogo 
-            onClick={handleLogoClick} 
-            className="cursor-pointer mb-8" 
-          />
-
-          {/* Drawer Items */}
           <div className="flex flex-col items-center justify-center flex-grow pt-8 pb-10">
             <ul className="space-y-4 font-medium pb-40">
               <li>
-                <Button name="About" width="200px" height="50px" rounded="full" />
+                <Button name="About" width="200px" height="50px" rounded="full" href="about" />
               </li>
               <li>
-                <Button name="Projects" width="200px" height="50px" rounded="full" />
+                <Button name="Projects" width="200px" height="50px" rounded="full" href="projects" />
               </li>
               <li>
-                <Button name="Skills" width="200px" height="50px" rounded="full" />
+                <Button name="Skills" width="200px" height="50px" rounded="full" href="skills" />
               </li>
               <li>
-                <Button name="Contact" width="200px" height="50px" rounded="full" />
+                <Button name="Contact" width="200px" height="50px" rounded="full" href="contact" />
               </li>
             </ul>
 
-            {/* Horizontal Icons */}
             <HorizontalIcons />
           </div>
         </div>
       </motion.div>
-
-      {/* Background Blur Effect */}
-      {isDrawerOpen && (
-        <div
-          className="fixed inset-0 bg-black/30 backdrop-blur-sm z-30"
-          onClick={toggleDrawer}
-        />
-      )}
     </div>
   );
 };

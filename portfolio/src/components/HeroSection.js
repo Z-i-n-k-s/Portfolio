@@ -6,9 +6,9 @@ import Button from "./Button.js";
 import { IconDownload } from "@tabler/icons-react";
 import { useMatches } from "react-router-dom";
 
-const HeroSection = () => {
+const HeroSection = ({ id }) => {
   return (
-    <div className=" h-{100vh}  4xl-mx:mt-32 2xl-mx:mt-20 mt-16 flex relative overflow-hidden  items-center font-mono px-10 py-10 sm-mx:px-4 xs-mx:px-2 xs-mx:py-4 h-fit lg-mx:justify-between bs-mx:flex-wrap bs-mx:flex-col-reverse bs-mx:!overflow-visible bs-mx:gap-6 md-mx:px-6">
+    <div className=" h-[90vh] bs-mx:h-fit 4xl-mx:mt-32 2xl-mx:mt-20 mt-16 flex relative overflow-hidden  items-center font-mono px-10 py-10 sm-mx:px-4 xs-mx:px-2 xs-mx:py-4  lg-mx:justify-between bs-mx:flex-wrap bs-mx:flex-col-reverse bs-mx:!overflow-visible bs-mx:gap-6 md-mx:px-6">
       <div className="bs:ml-10 bs:w-3/5 flex-col lg-mx:gap-3 mx-4 bs-mx:items-center flex justify-center items-center  ">
         <div className="text-black text-3xl lg-mx:text-2xl xs-mx:text-xl xsm-mx:text-lg">
           Hello,{" "}
@@ -20,7 +20,7 @@ const HeroSection = () => {
           {UserInfo.name}
         </div>
 
-        <div className="text-black text-4xl flex font-semibold lg-mx:text-[27px] sm-mx:text-2xl xs-mx:text-xl xsm-mx:text-base mb-4">
+        <div className="text-black text-4xl flex font-semibold lg-mx:text-[27px] sm-mx:text-2xl xs-mx:text-xl xsm-mx:text-base mb-10">
           I'm a&nbsp;
           <span className="text-black">
             <Typewriter
@@ -50,19 +50,20 @@ const HeroSection = () => {
       </div>
 
       <div className="h-fit flex justify-center items-center rounded-full bs:mr-10 w-fit">
-  <div className="w-[325px] h-[325px] lg-mx:w-64 lg-mx:h-64 xsm-mx:w-56 xsm-mx:h-56 items-center justify-center text-center">
-    <img
-      className="w-full h-full rounded-full bg-center bg-cover shadow-[inset_0_0_0_9px_rgba(2 ,255, 255 ,0.3)] animate-profile order-1 justify-self-center"
-      src={image2}
-      alt="profile"
-      style={{
-        backgroundRepeat: "no-repeat",
-        boxShadow: "inset 0 0 0 9px rgba(255, 255, 255, 0.3)",
-      }}
-    />
-  </div>
-</div>
-
+        <div className="w-[325px] h-[325px] lg-mx:w-64 lg-mx:h-64 xsm-mx:w-56 xsm-mx:h-56 flex items-center justify-center text-center">
+          <div className="w-full h-full rounded-full flex items-center justify-center">
+            <img
+              className="w-full h-full rounded-full bg-center bg-cover animate-profile"
+              style={{
+                
+                backgroundRepeat: "no-repeat",
+              }}
+              src={image2}
+              alt="profile"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,30 +1,22 @@
 import React from "react";
-import Button from "../components/Button";
-import VerticalName from "../components/VerticalName";
-import VerticalIcons from "../components/VerticalIcons";
-import About from "../components/About";
+
 import HeroSection from "../components/HeroSection";
 
+import SwiperComponent from "../components/SwiperComponent";
+
+import AboutTab from "../components/AboutTab";
 
 const HomePage = () => {
   return (
-    <div>
-      <HeroSection/>
-      
-      <div>
-        {/* <button className="border-2 border-black rounded-lg p-0">
-          <Button
-            name="Click Me"
-            width="150px"
-            height="50px "
-            rounded="lg"
-            className="p-0 m-0"
-          />
-        </button> */}
+    <div
+      className={` focus-visible:[&_button]:!outline-none min-h-[100dvh] items-center overflow-hidden justify-center`}
+    >
+      <HeroSection id="hero" />
 
-        {/* <VerticalName/> */}
-      </div>
-     <About/>
+      <SwiperComponent id="projects" />
+
+      <AboutTab />
+
     </div>
   );
 };
