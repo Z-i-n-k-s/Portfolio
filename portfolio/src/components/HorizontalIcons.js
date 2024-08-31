@@ -15,7 +15,7 @@ const HorizontalIcons = () => {
   return (
     <div className="flex justify-center space-x-6 pb-6">
       <a
-        href="https://github.com/"
+        href="https://github.com/Z-i-n-k-s"
         target="_blank"
         rel="noopener noreferrer"
         className="relative"
@@ -39,7 +39,7 @@ const HorizontalIcons = () => {
         </motion.div>
       </a>
       <a
-        href="https://www.linkedin.com/"
+         href="https://www.linkedin.com/in/zishan-rezwan/"
         target="_blank"
         rel="noopener noreferrer"
         className="relative"
@@ -87,7 +87,7 @@ const HorizontalIcons = () => {
         </motion.div>
       </a>
       <a
-        href="https://discord.com/"
+         href="https://discordapp.com/users/708984153185714210"
         target="_blank"
         rel="noopener noreferrer"
         className="relative"

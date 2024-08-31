@@ -41,19 +41,18 @@ const SwiperComponent = ({ id }) => {
   return (
     <section
       id={id}
-      className="relative pb-0 w-[calc(min(90rem, 90%))] 2xl-mx:mx-10 xsm-mx:mx-1 sm-mx:mx-3 4xl-mx:mx-20 3xl-mx:mx-16 min-h-screen flex flex-col items-center gap-12 px-6 py-8"
+      className="relative flex flex-col items-center justify-center w-full min-h-screen px-6 py-8"
     >
-      <div className="text-center">
+      <div className="text-center max-w-5xl w-full">
         <span className="uppercase text-gray-600 text-base tracking-wider">
-          latest
+          Latest
         </span>
         <h1 className="text-transparent text-4xl font-extrabold bg-black bg-clip-text">
           Projects
         </h1>
         <hr className="my-4 border-t-2 border-black w-24 mx-auto" />
         <p className="leading-6 text-gray-800">
-          {" "}
-          Explore some of my recent works{" "}
+          Explore some of my recent works
         </p>
         <button className="inline-block mt-8 border-2 border-gray-400 text-gray-600 font-semibold rounded-full transition-colors">
           <Button
@@ -76,26 +75,26 @@ const SwiperComponent = ({ id }) => {
           rotate: 0,
           stretch: 0,
           depth: 100,
-          modifier: 2, // Adjust this value as needed
+          modifier: 2,
           slideShadows: true,
         }}
         keyboard={{ enabled: true }}
         loop={true}
         pagination={{ clickable: true }}
-        spaceBetween={20} // Adjust spacing between slides
-        slidesOffsetBefore={0} // No offset before slides
-        slidesOffsetAfter={20} // Add offset after slides if needed
+        spaceBetween={20}
+        slidesOffsetBefore={0}
+        slidesOffsetAfter={20}
         breakpoints={{
-          360: { slidesPerView: 1 }, // xsm-mx
-          475: { slidesPerView: 1 }, // xs-mx
-          639: { slidesPerView: 2 }, // sm-mx
-          767: { slidesPerView: 2 }, // md-mx
-          899: { slidesPerView: 2 }, // bs-mx
-          1028: { slidesPerView: 2 }, // lg-mx
-          1284: { slidesPerView: 2 }, // xl-mx
-          1535: { slidesPerView: 3 }, // 2xl-mx
-          1835: { slidesPerView: 3 }, // 3xl-mx
-          2135: { slidesPerView: 3 }, // 4xl-mx
+          360: { slidesPerView: 1 },
+          475: { slidesPerView: 1 },
+          639: { slidesPerView: 2 },
+          767: { slidesPerView: 2 },
+          899: { slidesPerView: 2 },
+          1028: { slidesPerView: 2 },
+          1284: { slidesPerView: 2 },
+          1535: { slidesPerView: 3 },
+          1835: { slidesPerView: 3 },
+          2135: { slidesPerView: 3 },
         }}
         className="w-full pt-12"
         onSlideChange={handleSlideChange}
@@ -103,10 +102,10 @@ const SwiperComponent = ({ id }) => {
         {UserProjects.map((project, index) => (
           <SwiperSlide
             key={project.id}
-            className="relative rounded-xl mb-12 flex items-end justify-start w-72 h-96 bg-slate-200 shadow"
+            className="relative rounded-xl mb-12 flex items-end justify-start w-72 h-96 bg-slate-200 shadow-lg"
             onClick={(e) => handleSlideClick(e, project, index)}
           >
-            <div className=" bg-slate-200 rounded-xl h-48 2xl-mx:p-8 flex justify-center items-center overflow-hidden">
+            <div className="bg-slate-200 rounded-xl h-48 flex justify-center items-center overflow-hidden">
               <div className="bg-slate-200 h-48 sm:h-56 md:h-64 p-4 min-w-[120px] md:min-w-[145px] rounded-lg mb-4 overflow-hidden">
                 <img
                   src={project.image}
@@ -119,7 +118,6 @@ const SwiperComponent = ({ id }) => {
               <h2 className="font-medium text-base md:text-lg text-ellipsis line-clamp-1 text-black">
                 {project.title}
               </h2>
-
               <div className="mt-2">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.slice(0, 3).map((tech, index) => (
@@ -142,7 +140,6 @@ const SwiperComponent = ({ id }) => {
                   </p>
                 </div>
               </div>
-
               <div className="flex gap-2 mt-4 w-full justify-center pb-4">
                 <button
                   className="text-sm border-2 border-gray-500 text-gray-600 font-semibold rounded-full"
