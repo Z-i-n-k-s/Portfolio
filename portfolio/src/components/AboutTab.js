@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import image3 from "../assets/3.jpeg";
-import { motion } from "framer-motion";
+
 import {
   User2,
   Briefcase,
@@ -92,14 +92,14 @@ const tabs = [
   { id: "Skills", label: "Skills" },
 ];
 
-const AboutTab = () => {
+const AboutTab = ({id}) => {
   const getData = (arr, title) => {
     return arr.find((item) => item.title === title);
   };
 
   const [activeTab, setActiveTab] = useState("Personal");
   return (
-    <section className="relative w-[calc(100%-5rem)] max-w-7xl mx-auto min-h-screen flex flex-col items-center gap-12 px-6 py-8 4xl-mx:px-20 3xl-mx:px-16 2xl-mx:px-10 lg-mx:px-8 md-mx:px-6 sm-mx:px-4 xs-mx:px-2">
+    <section id={id} className="relative w-[calc(100%-5rem)] max-w-7xl mx-auto min-h-screen flex flex-col items-center gap-12 px-6 py-8 4xl-mx:px-20 3xl-mx:px-16 2xl-mx:px-10 lg-mx:px-8 md-mx:px-6 sm-mx:px-4 xs-mx:px-2">
       {/* Header Section */}
       <div className="text-center">
         <span className="text-gray-600 text-base tracking-wider">
@@ -198,7 +198,7 @@ const AboutTab = () => {
                     </h4>
                   </div>
                   {/* List */}
-                  <div className="flex flex-col gap-y-8 lg-mx:gap-y-6 md-mx:gap-y-4 sm-mx:gap-y-2 mt-6">
+                  <div className="flex flex-col gap-y-10 lg-mx:gap-y-10 md-mx:gap-y-10 xsm-mx:gap-y-6 sm-mx:gap-y-8 mt-6">
                     {getData(qualificationData, "Education").data.map(
                       (item, index) => {
                         const { school, qualification } = item;

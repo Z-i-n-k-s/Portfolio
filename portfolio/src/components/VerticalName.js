@@ -7,7 +7,7 @@ const VerticalName = () => {
       <motion.div
         initial={{ y: 0 }}
         whileHover={{ y: -10 }} // Moves up by 10px on hover
-        transition={{ type: "tween", duration: 0.3 }}
+        transition={{ type: "tween", duration: 0.5 }}
         className="md:flex fixed right-6 top-1/2 transform -translate-y-1/2 hidden flex-col items-center z-50"
       >
         <div className="text-gray-500 text-lg mb-2">
