@@ -54,7 +54,7 @@ const SwiperComponent = ({ id }) => {
         <p className="leading-6 text-gray-800">
           Explore some of my recent works
         </p>
-        <button className="inline-block mt-8 border-2 border-gray-400 text-gray-600 font-semibold rounded-full transition-colors">
+        <button className="inline-block mt-8 mb-8 border-2 border-gray-400 text-gray-600 font-semibold rounded-full transition-colors">
           <Button
             name="View All"
             width={140}
