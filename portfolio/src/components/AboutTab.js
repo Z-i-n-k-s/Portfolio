@@ -230,9 +230,9 @@ const AboutTab = ({id}) => {
               <>
                 {/* Horizontal Layout for lg-mx and Below */}
                 <div className="flex flex-col items-center text-center text-gray-700 w-full max-w-3xl mx-auto lg:hidden">
-                  <h4 className="text-xl font-semibold mb-2 xl:text-left lg-mx:text-lg md-mx:text-base sm-mx:text-sm xs-mx:text-xs">
+                <h3 className="text-2xl pb-2 border-b-2 font-bold xl:text-2xl lg-mx:text-xl md-mx:text-lg sm-mx:text-base xs-mx:text-sm">
                     Tools I Use Everyday
-                  </h4>
+                  </h3>
                   <div className="border-b border-border mb-4"></div>
                   {/* Tool list */}
                   <div className="flex flex-col w-full">
@@ -244,13 +244,13 @@ const AboutTab = ({id}) => {
                           className="mb-6 lg-mx:mb-4 md-mx:mb-3 sm-mx:mb-3 xs-mx:mb-2"
                         >
                           {/* Category */}
-                          <div className="font-semibold mb-2 text-base lg-mx:text-base md-mx:text-sm sm-mx:text-sm xs-mx:text-xs">
+                          <div className="font-semibold mb-2 text-[20px] lg-mx:text-[20px] md-mx:text-lg sm-mx:text-base xs-mx:text-sm">
                             {category}
                           </div>
                           <div className="flex flex-wrap gap-x-8 gap-y-6 justify-center xl:justify-start lg-mx:gap-x-6 md-mx:gap-x-4 sm-mx:gap-x-4 sm-mx:gap-y-4 xs-mx:gap-x-2 xs-mx:gap-y-2">
                             {skills.map((skill, skillIndex) => (
                               <div
-                                className="font-medium text-sm lg-mx:text-sm md-mx:text-xs sm-mx:text-xs xs-mx:text-[10px]"
+                                className="font-medium text-base lg-mx:text-base md-mx:text-[15px] sm-mx:text-[13px] xs-mx:text-[11px]"
                                 key={skillIndex}
                               >
                                 {skill}
@@ -279,13 +279,13 @@ const AboutTab = ({id}) => {
                         className="flex flex-col w-1/3 px-4 relative"
                       >
                         {/* Category */}
-                        <div className="font-semibold mb-2 text-lg lg-mx:text-base md-mx:text-sm sm-mx:text-sm xs-mx:text-xs border-b-2  border-gray-300">
+                        <div className="font-semibold mb-2 text-lg lg-mx:text-base md-mx:text-sm sm-mx:text-sm xs-mx:text-sm xsm-mx:text-xs border-b-2  border-gray-300">
                           {category}
                         </div>
                         <div className="flex flex-col gap-y-4">
                           {skills.map((skill, skillIndex) => (
                             <div
-                              className="font-medium text-sm lg-mx:text-sm md-mx:text-xs sm-mx:text-xs xs-mx:text-[10px]"
+                              className="font-medium text-sm lg-mx:text-sm md-mx:text-xs sm-mx:text-xs xs-mx:text-[10px] xsm-mx:text-[9px]"
                               key={skillIndex}
                             >
                               {skill}

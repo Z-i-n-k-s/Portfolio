@@ -41,7 +41,7 @@ const SwiperComponent = ({ id }) => {
   return (
     <section
       id={id}
-      className="relative flex flex-col items-center justify-center w-full min-h-screen px-6 py-8"
+      className="relative xs-mx:px-6 sm-mx:px-8 md-mx:px-4 bs-mx:px-12 bs-mx:pl-16 lg-mx:px-16 xl-mx:px-20 2xl-mx:px-24 3xl-mx:px-28 4xl-mx:px-32 flex flex-col items-center justify-center w-full min-h-screen px-6 py-8"
     >
       <div className="text-center max-w-5xl w-full">
         <span className="uppercase text-gray-600 text-base tracking-wider">
@@ -87,8 +87,8 @@ const SwiperComponent = ({ id }) => {
         breakpoints={{
           360: { slidesPerView: 1 },
           475: { slidesPerView: 1 },
-          639: { slidesPerView: 2 },
-          767: { slidesPerView: 2 },
+          639: { slidesPerView: 1 },
+          767: { slidesPerView: 1 },
           899: { slidesPerView: 2 },
           1028: { slidesPerView: 2 },
           1284: { slidesPerView: 2 },
